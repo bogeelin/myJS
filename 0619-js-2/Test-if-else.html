@@ -25,26 +25,23 @@
 
         //測試用
         // BMI=35
-
+        // 多層檢查 (符合條件，執行完就結束檢查)
         if (BMI < 18.5) {
             console.log('體重過輕')
+        } else if (BMI >= 18.5 && BMI < 24) {
+            console.log('正常範圍');
+        } else if (BMI >= 24 && BMI < 27) {
+            console.log('體重過重');
+        } else if (BMI >= 27 && BMI < 30) {
+            console.log('輕度肥胖');
+        } else if (BMI >= 30 && BMI < 35) {
+            console.log('中度肥胖');
+        } else if (BMI >= 35) {
+            console.log('重度肥胖');
         }
-        //區間資料使用交集邏輯運算子 : &&
-        if (BMI >= 18.5 && BMI < 24) {
-            console.log('正常範圍')
-        }
-        if (BMI >= 24 && BMI < 27) {
-            console.log('體重過重')
-        }
-        if (BMI >= 27 && BMI < 30) {
-            console.log('輕度肥胖')
-        }
-        if (BMI >= 30 && BMI < 35) {
-            console.log('中度肥胖')
-        }
-        if (BMI >= 35) {
-            console.log('重度肥胖')
-        }
+
+
+
     </script>
 
 </body>
