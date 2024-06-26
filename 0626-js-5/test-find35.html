@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //使用"一個"迴圈找出1-10中，3的倍數及5的倍數(迴圈結束後才顯示結果)
+        let str3 = ' '; //3的倍數
+        let str5 = ' '; //5的倍數
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0) {
+                str3 = str3+i+' ';
+                //簡化 : str3 += i+'';
+            } else if (i % 5 === 0) {
+                str5 = str5+i+' ';
+                //簡化 : str5 += i+'';
+            }
+        }
+//等號兩邊變數相同，可簡寫(ex.a=a+1 改 a+=1 ； b=b-1 改 b-=1) 
+
+        //字串字面值寫法
+        document.write(`1-10中3的倍數:${str3}<br>1-10中5的倍數:${str5}`);  
+        document.write('<br>')
+        //一般串接方式
+        document.write('1-10中3的倍數:'+str3+'<br>'+'1-10中5的倍數:'+str5);  
+
+    </script>
+</body>
+
+</html>
