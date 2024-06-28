@@ -10,17 +10,22 @@
 <body>
     <script>
         let bingoNum = 99;
-        let guess = prompt('請開始猜數字，有三次機會!')
-        if (guess == null) {
-            window.alert('您沒有輸入數字');
-        } else {
-            let guess = Number(guess.trim());
-            for (i = 1; i <= 3; i++) {
-                
-            }
+        let round = ' ';
+        for(let i = 1;i<=3;i++){
+            let guess = prompt('請開始猜數字，有三次機會!');
+            document.write(`第${i}次:${guess}`);
         }
 
+
+
+
+
+
+
         /*
+        guess == null) {
+            window.alert('您沒有輸入數字');
+        } else {
         if (guess === 99) {
         window.alert('答對了!');
         }
