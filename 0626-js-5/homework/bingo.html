@@ -2,46 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 <body>
     <script>
         let bingoNum = 99;
-        let round = ' ';
-        for(let i = 1;i<=3;i++){
-            let guess = prompt('請開始猜數字，有三次機會!');
-            document.write(`第${i}次:${guess}`);
+
+        for (let i = 1; i <= 3; i++) {
+            let guess = prompt("請開始猜數字(1-100)，有三次機會!");
+            document.write(`第${i}次 : ${guess}  `);
+            if (guess == null) {
+                window.alert('您直接按了取消，請重新開始');
+                break;
+            } else {
+                if (guess == '') {
+                    document.write('數字不能為空白' + '<br>');
+                } else {
+                    let guessNum = Number(guess.trim());
+                    if (guessNum == 99) {
+                        document.write('答對了!' + '<br>');
+                        break;
+                    } else {
+                        if (guessNum != bingoNum) {
+                            document.write('答錯了!' + '<br>');
+                        }
+                    }
+                }
+            }
         }
-
-
-
-
-
-
-
-        /*
-        guess == null) {
-            window.alert('您沒有輸入數字');
-        } else {
-        if (guess === 99) {
-        window.alert('答對了!');
-        }
-        */
-        /*
-        switch (guess)
-        case '':
-        window.alert('數字不能為空白')
-        break;
-        case '99':
-        window.alert('答對了!')
-        break;
-        caes !=99
-        }
-        }
-        */
     </script>
 </body>
 
