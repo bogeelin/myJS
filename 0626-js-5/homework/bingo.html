@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 <body>
     <script>
+        let bingoNum = 99;
+
         for (let i = 1; i <= 3; i++) {
             let guess = prompt("請開始猜數字(1-100)，有三次機會!");
             document.write(`第${i}次 : ${guess}  `);
